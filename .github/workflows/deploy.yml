@@ -22,5 +22,5 @@ jobs:
       run: cp -r build/libs/*.jar /home/kamil/MinecraftServer/plugins/DeathSwap.jar
         
     - name: Reload Minecraft Server
-      run: screen -S Minecraft -X stuff "reload confirm^M"# This workflow will build a Java project with Gradle
+      run: screen -S Minecraft -X stuff "reload confirm^M"
       
