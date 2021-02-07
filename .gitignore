@@ -12,3 +12,20 @@ gradle-app.setting
 
 # # Work around https://youtrack.jetbrains.com/issue/IDEA-116898
 # gradle/wrapper/gradle-wrapper.properties
+
+
+# IDE's
+
+.vscode/
+.vscode
+
+.idea
+.idea/
+
+# Project files
+
+*.iml
+
+# Mac OS
+
+.DS_Store
