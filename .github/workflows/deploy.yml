@@ -1,0 +1,26 @@
+name: Deploy plugin to Server 
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+      
+jobs:
+  build:
+    runs-on: self-hosted
+    
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Grant execute permission for gradlew
+      run: chmod +x gradlew
+      
+    - name: Build with Gradle
+      run: ./gradlew build jar
+
+    - name: Move jar file to plugins folder
+      run: cp -r build/libs/*.jar /home/kamil/MinecraftServer/plugins/DeathSwap.jar
+        
+    - name: Reload Minecraft Server
+      run: screen -S Minecraft -X stuff "reload confirm^M"
+      
