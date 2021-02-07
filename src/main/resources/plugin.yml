@@ -1,5 +1,8 @@
 main: com.deathswap.Main
-name: MinecraftPluginTemplate
+name: DeathSwap
 version: 0.0.1
 api-version: 1.16
 author: teinf
+commands:
+  deathswap:
+    description: Death Swap!
